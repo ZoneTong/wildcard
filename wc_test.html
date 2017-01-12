@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script src="wildcard.js"></script>
+<script >
+function testExactMatch(p, str, b){
+	if (ExactMatch(p, str) != b){
+		console.error(p + ' match ' + str + ':' + !b + '\n');
+	}
+}
+testExactMatch('women1314', 'women1314', true);
+testExactMatch('*', 'women1314', true);
+testExactMatch('w*', 'women1314', true);
+testExactMatch('*4', 'women1314', true);
+testExactMatch('w*4', 'women1314', true);
+testExactMatch('*o', 'women1314', false);
+testExactMatch('?om?n131?', 'women1314', true);
+testExactMatch('women[13]14', 'women1314', false);
+testExactMatch('women[13][34]14', 'women1314', true);
+testExactMatch('?omen1[23]14', 'women1314', true);
+testExactMatch('?*[14]', 'women1314', true);
+</script>
+</body>
+</html>

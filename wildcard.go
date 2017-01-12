@@ -1,3 +1,4 @@
+//github.com/ZoneTong/wildcard
 package wildcard
 
 import (

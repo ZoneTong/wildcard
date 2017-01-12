@@ -5,6 +5,7 @@ import (
 )
 
 func TestExactMatch(t *testing.T) {
+	testExactMatch("3wo6", "3wo6", true, t)
 	testExactMatch("*", "3wo6", true, t)
 	testExactMatch("*6", "3wo6", true, t)
 	testExactMatch("3*", "3wo6", true, t)
