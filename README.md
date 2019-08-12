@@ -5,5 +5,5 @@ like in Makefile
 simple support rules: \* ? [...]     
 只简单支持 \* ？ [...]
 
-not support: '\'
+not support: '\\'
 不支持斜杠转义
